@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <form (ngSubmit)="saveNote()">
+        <div class="form-group ">
+          <label for="inputEmail4">Title</label>
+          <input type="email" class="form-control form-control-sm" placeholder="Please Enter Title"
+            [(ngModel)]=notesData.title name="title" #productNameVar="ngModel" id="inputEmail4">
+        </div>
+
+        <div class="form-group">
+          <label>Body</label>
+          <textarea row="3" class="form-control" placeholder="Plase Enter Notes Body" [(ngModel)]=notesData.body
+            name="body" #productNameVar="ngModel"> </textarea>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Catergory</label>
+          <input type="text" class="form-control" id="inputAddress" [(ngModel)]=notesData.category name="catergory"
+            #productNameVar="ngModel" placeholder="Please Enter Catergory">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Color</label>
+          <input type="text" class="form-control" id="inputAddress2" [(ngModel)]=notesData.color name="color"
+            #productNameVar="ngModel" placeholder="Please Enter Color">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="reset" class="btn btn-light" [routerLink]="['/']">Cancel</button>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+</div>
