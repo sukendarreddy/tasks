@@ -1,7 +1,12 @@
-<div class="container">
+
+
+<div class="container" style="padding-top: 30px;">
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+      <h3 class="text-center" > {{pageTitle}} </h3>
+    
+
       <form (ngSubmit)="saveNote()">
         <div class="form-group ">
           <label for="inputEmail4">Title</label>
@@ -21,13 +26,21 @@
         </div>
         <div class="form-group">
           <label for="inputAddress2">Color</label>
-          <input type="text" class="form-control" id="inputAddress2" [(ngModel)]=notesData.color name="color"
-            #productNameVar="ngModel" placeholder="Please Enter Color">
+          <select class="form-control" [(ngModel)]=notesData.color name="color" #productNameVar="ngModel" >
+            <option *ngFor="let data of colorData" [value]="data?.colorId" >
+              {{data?.colorId}}
+            </option>
+          </select>
+          <!-- <input type="text" class="form-control" id="inputAddress2" [(ngModel)]=notesData.color name="color"
+            #productNameVar="ngModel" placeholder="Please Enter Color"> -->
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="submit" align="right" class="btn btn-primary">Submit</button> &nbsp;&nbsp;&nbsp;&nbsp;
         <button type="reset" class="btn btn-light" [routerLink]="['/']">Cancel</button>
+   
+     
       </form>
+
     </div>
     <div class="col-md-2"></div>
   </div>

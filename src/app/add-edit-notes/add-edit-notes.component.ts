@@ -16,6 +16,19 @@ export class AddEditNotesComponent implements OnInit {
   private originalNote: Notes;
   notesData: Notes;
 
+  colorData: any[] = [
+    { colorId: 'Green', colorName: 'Green' },
+    { colorId: 'Red', colorName: 'Red' },
+    { colorId: 'Yellow', colorName: 'yellow' },
+    { colorId: 'Blue', colorName: 'Blue' },
+    { colorId: 'Orange', colorName: 'Orange' },
+    { colorId: 'Pink', colorName: 'Pink' },
+    { colorId: 'Violet', colorName: 'Violet' },
+    { colorId: 'Grey', colorName: 'Grey' },
+    { colorId: 'White', colorName: 'White' },
+    { colorId: 'Purple', colorName: 'Purple' }
+  ]
+
   get isDirty(): boolean {
     return this.editForm.dirty ? true : false;
   }

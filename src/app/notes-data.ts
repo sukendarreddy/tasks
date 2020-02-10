@@ -13,7 +13,7 @@ export class NotesData implements InMemoryDbService {
                 modifiedDate: '30-01-2020',
                 CreatedDate: '30-01-2020',
                 category: 'UI',
-                color: 'green'
+                color:'blue'
             },
             {
                 id: 2,
@@ -36,7 +36,7 @@ export class NotesData implements InMemoryDbService {
             {
                 id: 4,
                 title: 'Title 4',
-                body: 'Infosys Limited is an Indian multinational corporation that provides business consulting,Pune',
+                body: 'Infosys Limited is an Indian multinational corporation that provides business consulting , Pune',
                 modifiedDate: '30-01-2020',
                 CreatedDate: '30-01-2020',
                 category: 'UI',
